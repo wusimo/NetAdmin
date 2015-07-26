@@ -21,7 +21,7 @@ class AccountManager(BaseUserManager):
             raise ValueError('Users must choose a vaild campus')
 
         account = self.model(
-            email=self.normalize_email(email), username=kwargs.get('username'), campus=kwargs.get('campus')
+            email=self.normalize_email(email), username=kwargs.get('username')
         )
 
         account.set_password(password)
@@ -41,15 +41,11 @@ class AccountManager(BaseUserManager):
 class Account(AbstractBaseUser):
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=40, unique=True)
-    campus = models.CharField(max_length=40, blank=True)
-
-    courses_pack = models.IntegerField(default=0)
-    courses_caught = models.IntegerField(default=0)
-    courses_used = models.IntegerField(default=0)
-    #courses_having = models.
 
     is_admin = models.BooleanField(default=False)
-    is_premium = models.BooleanField(default=False)
+    is_student = models.BooleanField(default=False)
+    is_parents = models.BooleanField(default=False)
+    is_TA = models.BooleanField(default=False)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
