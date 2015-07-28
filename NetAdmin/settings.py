@@ -102,7 +102,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 
-STATIC_ROOT = '/Users/stevelee/CourseMaster/static/'
+STATIC_ROOT = '/Users/stevelee/NetAdmin/static/'
 
 STATIC_URL = '/static/'
 
@@ -119,10 +119,3 @@ STATICFILES_DIRS = (
 
 AUTH_USER_MODEL = 'Account.Account'
 LOGIN_REDIRECT_URL = '/index/'
-
-
-STATIC_URL = '/static/'
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
-)
