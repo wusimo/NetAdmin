@@ -20,15 +20,18 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="top-navigation">
+<body>
 
     <div id="wrapper">
         {% include 'sidenav.html' %}
+
         <div id="page-wrapper" class="gray-bg">
+
         {% include "topnav.html" %}
         {% block content %}{% endblock content %}
         {% include 'footer.html' %}
-    </div>
+
+        </div>
 
 </div>
 
