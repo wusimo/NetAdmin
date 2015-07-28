@@ -17,8 +17,6 @@ class AccountManager(BaseUserManager):
         if not kwargs.get('username'):
             raise ValueError('Users must have a vaild username')
 
-        if not kwargs.get('campus'):
-            raise ValueError('Users must choose a vaild campus')
 
         account = self.model(
             email=self.normalize_email(email), username=kwargs.get('username')
@@ -53,7 +51,7 @@ class Account(AbstractBaseUser):
     objects = AccountManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'campus']
+    REQUIRED_FIELDS = ['username']
 
     def __unicode__(self):
         return self.email

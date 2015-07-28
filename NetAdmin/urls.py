@@ -16,6 +16,15 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from NetAdmin import views as NetAdmin_views
+from Account import views as Account_views
+
 urlpatterns = [
+    url(r'^index/', NetAdmin_views.index_page_view, name='index'),
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^login/$', Account_views.LoginView, name='login'),
+    url(r'^logout/$', Account_views.LogoutView, name='logout'),
+    url(r'^register/$', Account_views.RegisterView, name='register'),
+
 ]

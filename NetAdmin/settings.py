@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'Account',
 )
 
@@ -117,7 +118,7 @@ STATICFILES_DIRS = (
 # Custom user model
 
 AUTH_USER_MODEL = 'Account.Account'
-LOGIN_REDIRECT_URL = '/index'
+LOGIN_REDIRECT_URL = '/index/'
 
 
 STATIC_URL = '/static/'
