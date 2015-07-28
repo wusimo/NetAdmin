@@ -20,7 +20,7 @@ from NetAdmin import views as NetAdmin_views
 from Account import views as Account_views
 
 urlpatterns = [
-    url(r'^$', NetAdmin_views.landing_page_view, name='landing'),
+    url(r'^index/', NetAdmin_views.index_page_view, name='index'),
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^login/$', Account_views.LoginView, name='login'),
