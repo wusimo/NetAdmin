@@ -19,7 +19,6 @@ from django.contrib import admin
 from NetAdmin import views as NetAdmin_views
 from Account import views as Account_views
 
-from Student import urls as student_urls
 
 urlpatterns = [
     url(r'^index/', NetAdmin_views.index_page_view, name='index'),
@@ -29,7 +28,6 @@ urlpatterns = [
     url(r'^logout/$', Account_views.LogoutView, name='logout'),
     url(r'^register/$', Account_views.RegisterView, name='register'),
 
-    url(r'^student/', include(student_urls)),
 
 
 ]
