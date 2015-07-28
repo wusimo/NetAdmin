@@ -56,7 +56,7 @@ ROOT_URLCONF = 'NetAdmin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -99,6 +99,26 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+
+STATIC_ROOT = '/Users/stevelee/CourseMaster/static/'
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('img', os.path.join(STATIC_ROOT, 'img').replace('\\', '/')),
+    ('font-awesome', os.path.join(STATIC_ROOT, 'font-awesome').replace('\\', '/')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
+    ('landing', os.path.join(STATIC_ROOT, 'landing').replace('\\', '/')),
+)
+
+# Custom user model
+
+AUTH_USER_MODEL = 'Account.Account'
+LOGIN_REDIRECT_URL = '/index'
+
 
 STATIC_URL = '/static/'
 
