@@ -29,6 +29,6 @@ urlpatterns = [
     url(r'^logout/$', Account_views.LogoutView, name='logout'),
     url(r'^register/$', Account_views.RegisterView, name='register'),
 
-    url(r'^ta/', include(TA_urls),
+    url(r'^ta/', include(TA_urls)),
 
 ]
