@@ -19,6 +19,8 @@ from django.contrib import admin
 from NetAdmin import views as NetAdmin_views
 from Account import views as Account_views
 
+from TA import urls as TA_urls
+
 urlpatterns = [
     url(r'^index/', NetAdmin_views.index_page_view, name='index'),
     url(r'^admin/', include(admin.site.urls)),
@@ -26,5 +28,7 @@ urlpatterns = [
     url(r'^login/$', Account_views.LoginView, name='login'),
     url(r'^logout/$', Account_views.LogoutView, name='logout'),
     url(r'^register/$', Account_views.RegisterView, name='register'),
+
+    url(r'^ta/', include(TA_urls),
 
 ]
