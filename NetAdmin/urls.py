@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^logout/$', Account_views.LogoutView, name='logout'),
     url(r'^register/$', Account_views.RegisterView, name='register'),
 
+    url(r'^admin/', include(admin.site.urls)),
+
 ]
