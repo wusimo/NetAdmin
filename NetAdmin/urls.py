@@ -19,13 +19,22 @@ from django.contrib import admin
 from NetAdmin import views as NetAdmin_views
 from Account import views as Account_views
 
+from TA import urls as ta_urls
+from Student import urls as student_urls
+from Account import urls as account_urls
+from Parents import urls as parents_urls
+from Admin import urls as admin_urls
+
 urlpatterns = [
     url(r'^$', NetAdmin_views.landing_page_view),
-    url(r'^index/', NetAdmin_views.index_page_view, name='index'),
+
+    url(r'^account/', include(account_urls)),
+
+    url(r'^student/', include(student_urls)),
+    url(r'^parents/', include(parents_urls)),
+    url(r'^netadmin/', include(admin_urls)),
+    url(r'^ta/', include(ta_urls)),
+
+
     url(r'^admin/', include(admin.site.urls)),
-
-    url(r'^login/$', Account_views.LoginView, name='login'),
-    url(r'^logout/$', Account_views.LogoutView, name='logout'),
-    url(r'^register/$', Account_views.RegisterView, name='register'),
-
 ]
