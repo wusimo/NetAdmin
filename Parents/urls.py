@@ -1,5 +1,5 @@
-from django.conf.urls import include, url
-from Student import views
+from django.conf.urls import url
+from . import views
 
 urlpatterns = [
     url(r'^$', views.email_page_view),

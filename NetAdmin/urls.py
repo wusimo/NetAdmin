@@ -17,7 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from NetAdmin import views as NetAdmin_views
-from Account import views as Account_views
 
 from TA import urls as ta_urls
 from Student import urls as student_urls
@@ -27,6 +26,7 @@ from Admin import urls as admin_urls
 
 urlpatterns = [
     url(r'^$', NetAdmin_views.landing_page_view),
+    url(r'^index/', NetAdmin_views.index_page_view),
 
     url(r'^account/', include(account_urls)),
 

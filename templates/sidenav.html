@@ -41,13 +41,20 @@
                 
                 {% if user.is_TA%}
                 <li>
-                    <a href="css_animation.html"><i class="fa fa-eye"></i> <span class="nav-label">TODO</span></a>
+                    <a href="css_animation.html"><i class="fa fa-eye"></i> <span class="nav-label">中介</span></a>
+                    <a href="css_animation.html"><i class="fa fa-book"></i> <span class="nav-label">待批作文</span></a>
+                    <a href="css_animation.html"><i class="fa fa-user"></i> <span class="nav-label">已批作文</span></a>
+                    <a href="css_animation.html"><i class="fa fa-file-text"></i> <span class="nav-label">学生</span></a>
                 </li>
                 {% endif %}
                 
                 {% if user.is_admin%}
                 <li>
-                    <a href="css_animation.html"><i class="fa fa-eye"></i> <span class="nav-label">TODO</span></a>
+                    <a href="css_animation.html"><i class="fa fa-eye"></i> <span class="nav-label">家长</span></a>
+                    <a href="css_animation.html"><i class="fa fa-book"></i> <span class="nav-label">学生</span></a>
+                    <a href="css_animation.html"><i class="fa fa-user"></i> <span class="nav-label">TA</span></a>
+                    <a href="css_animation.html"><i class="fa fa-file-text"></i> <span class="nav-label">待翻译邮件</span></a>
+                    <a href="css_animation.html"><i class="fa fa-file-text"></i> <span class="nav-label">学生信息管理</span></a>
                 </li>
                 {% endif %}
             </ul>

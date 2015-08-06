@@ -19,14 +19,7 @@ def LoginView(request):
             if user is not None:
                 if user.is_active:
                     auth_login(request, user)
-                    if user.is_student:
-                        return HttpResponseRedirect('/student/')
-                    elif user.is_TA:
-                        return HttpResponseRedirect('/ta/')
-                    elif user.is_parents:
-                        return HttpResponseRedirect('/parents/')
-                    elif user.is_admin:
-                        return HttpResponseRedirect('/netadmin/')
+                    return HttpResponseRedirect('/index/')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
