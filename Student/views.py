@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from NetAdmin.models import Message
+
 def index_page_view(request):
     return render(request, 'mailbox.html')
 
 def toparents_page_view(request):
-    return render(request, 'chat.html')
+    message_list = Message.objects.filter(receiver=request.user.username,)
+    return render(request, 'message_list.html')
 
 def tota_page_view(request):
     return HttpResponse('toTA')

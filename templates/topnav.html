@@ -108,12 +108,18 @@
                     </ul>
                 </li>
 
-
                 <li>
-                    <a href="login.html">
+                    <a href="/account/logout/">
                         <i class="fa fa-sign-out"></i> Log out
                     </a>
                 </li>
+                {% if show_right_nav %}
+                <li>
+                    <a class="right-sidebar-toggle">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li>
+                {% endif %}
             </ul>
 
         </nav>

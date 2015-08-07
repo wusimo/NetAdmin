@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="mini-navbar">
 
     <div id="wrapper">
         {% include 'sidenav.html' %}
@@ -30,6 +30,10 @@
         {% include "topnav.html" %}
         {% block content %}{% endblock content %}
         {% include 'footer.html' %}
+
+        {% if show_right_nav %}
+            {% include 'rightbar.html' %}
+        {% endif %}
 
         </div>
 

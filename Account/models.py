@@ -45,6 +45,10 @@ class Account(AbstractBaseUser):
     is_parents = models.BooleanField(default=False)
     is_TA = models.BooleanField(default=False)
 
+    my_parents = models.CharField(max_length=40, null=True)
+    my_child = models.CharField(max_length=40, null=True)
+    my_student = models.TextField(default='[]', null=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

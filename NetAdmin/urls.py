@@ -22,7 +22,7 @@ from TA import urls as ta_urls
 from Student import urls as student_urls
 from Account import urls as account_urls
 from Parents import urls as parents_urls
-from Admin import urls as admin_urls
+from Agent import urls as admin_urls
 
 urlpatterns = [
     url(r'^$', NetAdmin_views.landing_page_view),
@@ -32,7 +32,7 @@ urlpatterns = [
 
     url(r'^student/', include(student_urls)),
     url(r'^parents/', include(parents_urls)),
-    url(r'^netadmin/', include(admin_urls)),
+    url(r'^agent/', include(admin_urls)),
     url(r'^ta/', include(ta_urls)),
 
 
